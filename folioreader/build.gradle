@@ -105,13 +105,8 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$versions.retrofit"
 
     // R2 modules
-    api("com.github.codetoart:r2-shared-kotlin:$versions.r2SharedKotlin") {
-        changing = true
-    }
-    api("com.github.codetoart:r2-streamer-kotlin:$versions.r2StreamerKotlin") {
-        exclude group: "org.slf4j", module: "slf4j-api"
-        changing = true
-    }
+    implementation "org.readium.kotlin-toolkit:readium-shared:2.3.0"
+    implementation "org.readium.kotlin-toolkit:readium-streamer:2.3.0"
 
     // Only ReflectionUtils in Spring framework is used
     implementation 'org.springframework:spring-core:4.3.19.RELEASE'
